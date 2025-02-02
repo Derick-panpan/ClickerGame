@@ -1,0 +1,54 @@
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #c0c0c0;
+  user-select: none;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.left {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.default:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.bot-upgrade {
+  display: flex;
+  align-items: center;
+}
+
+.bot-image {
+  margin-right: 1px; 
+  width: 34px; 
+  height: 34px;
+}
+
+.left-section {
+ position: absolute;
+ top: 10px; 
+ right: 10px;
+ margin-top: 0; 
+ margin-right: 0; 
+}
+
+.click-me {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  margin-top: 0; 
+  margin-left: 0;
+}
