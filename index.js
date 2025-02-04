@@ -32,5 +32,46 @@ function startAutoClicker() {
 }
 
 
-clickButton.addEventListener('click', incrementGem)
+clickButton.addEventListener('click', incrementGem);
+upgradeBotButton.addEventListener('click', buyBotUpgrade);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const logo = document.getElementById('logo');
+    const originalSrc = logo.src;
+    const hoverSrc = './assets/Emoji_uh.png';
+
+    logo.addEventListener('mouseover', () => {
+        logo.src = hoverSrc;
+    });
+
+    logo.addEventListener('mouseout', () => {
+        logo.src = originalSrc;
+    }); 
+});
+
+function checkGemCount() {
+    let currentGems = parseFloat(gem.innerHTML);
+    if (currentGems >= 10) {
+        showModal();
+    }
+}
+
+function showModal() {
+    const modal = document.getElementById('gemModal');
+    const span = document.getElementsByClassName('close')[0];
+
+    modal.style.display = 'block';
+
+    span.onclick = () => {
+        modal.style.display = 'none';
+    }
+
+    window.onclick = (event) => {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+}
+
+clickButton.addEventListener('click', incrementGem);
 upgradeBotButton.addEventListener('click', buyBotUpgrade);
